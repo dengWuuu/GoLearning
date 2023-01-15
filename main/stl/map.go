@@ -21,6 +21,8 @@ func main() {
 
 	if !flag {
 		fmt.Println("不存在此键")
+	} else {
+		fmt.Println(m["23"])
 	}
 
 	//delete(m, "1")
