@@ -14,6 +14,9 @@ func main() {
 	var ptr *int
 	i := 1
 	ptr = &i
+
+	//ptr = new(int)
+
 	fmt.Println("前面", *ptr)
 	zeroptr(ptr)
 	fmt.Println("后面", *ptr)

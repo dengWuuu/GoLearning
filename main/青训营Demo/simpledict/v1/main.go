@@ -9,6 +9,9 @@ import (
 )
 
 func main() {
+
+	c := http.Client{}
+	fmt.Println(c)
 	client := &http.Client{}
 	var data = strings.NewReader(`{"trans_type":"en2zh","source":"good"}`)
 	req, err := http.NewRequest("POST", "https://api.interpreter.caiyunai.com/v1/dict", data)
