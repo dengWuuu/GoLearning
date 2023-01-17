@@ -202,7 +202,7 @@ func query(word string) {
 	payload.Set("query", word)
 	payload.Set("transtype", "translang")
 	payload.Set("simple_means_flag", "3")
-	payload.Set("sign", "54706.276099")
+	payload.Set("sign", "431039.159886")
 	payload.Set("token", "44c8d9a28bca7742211e3d21316d8dbf")
 	payload.Set("domain", "common")
 	req, err := http.NewRequest(http.MethodPost, "https://fanyi.baidu.com/v2transapi?from=en&to=zh", strings.NewReader(payload.Encode()))
