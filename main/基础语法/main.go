@@ -1,20 +1,27 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+)
 
-func main() {
-	fmt.Println("hello world!")
-	fmt.Print(1)
-	fmt.Print(1)
-	var age = 1
-	fmt.Println(age)
+func testMain() string {
+	var s string
+	if err := test1(); err != nil {
+		s = "alhdfsadkflhaslfaslgh"
+		return s
+	}
+	if err := test2(); err != nil {
+		s = "akdhkahdfjgkhasdf"
+		return s
+	}
 
-	var di = 1
-	var b = "s"
-	println(di, b)
-	var name int
-	name = 3
-	println(name)
+	return s
+}
 
-	fmt.Println(y)
+func test1() error {
+	return errors.New("lakjsd")
+}
+
+func test2() error {
+	return errors.New("lakjsd")
 }
