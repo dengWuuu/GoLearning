@@ -5,10 +5,10 @@ import (
 )
 
 type Post struct {
-	Id         int64  `json:"id"`
-	ParentId   int64  `json:"parent_id"`
-	Content    string `json:"content"`
-	CreateTime int64  `json:"create_time"`
+	Id         int64  `json_test:"id"`
+	ParentId   int64  `json_test:"parent_id"`
+	Content    string `json_test:"content"`
+	CreateTime int64  `json_test:"create_time"`
 }
 type PostDao struct {
 }

@@ -11,42 +11,42 @@ import (
 )
 
 type DictRequest struct {
-	TransType string `json:"trans_type"`
-	Source    string `json:"source"`
-	UserID    string `json:"user_id"`
+	TransType string `json_test:"trans_type"`
+	Source    string `json_test:"source"`
+	UserID    string `json_test:"user_id"`
 }
 
 type DictResponse struct {
-	Rc   int `json:"rc"`
+	Rc   int `json_test:"rc"`
 	Wiki struct {
-		KnownInLaguages int `json:"known_in_laguages"`
+		KnownInLaguages int `json_test:"known_in_laguages"`
 		Description     struct {
-			Source string      `json:"source"`
-			Target interface{} `json:"target"`
-		} `json:"description"`
-		ID   string `json:"id"`
+			Source string      `json_test:"source"`
+			Target interface{} `json_test:"target"`
+		} `json_test:"description"`
+		ID   string `json_test:"id"`
 		Item struct {
-			Source string `json:"source"`
-			Target string `json:"target"`
-		} `json:"item"`
-		ImageURL  string `json:"image_url"`
-		IsSubject string `json:"is_subject"`
-		Sitelink  string `json:"sitelink"`
-	} `json:"wiki"`
+			Source string `json_test:"source"`
+			Target string `json_test:"target"`
+		} `json_test:"item"`
+		ImageURL  string `json_test:"image_url"`
+		IsSubject string `json_test:"is_subject"`
+		Sitelink  string `json_test:"sitelink"`
+	} `json_test:"wiki"`
 	Dictionary struct {
 		Prons struct {
-			EnUs string `json:"en-us"`
-			En   string `json:"en"`
-		} `json:"prons"`
-		Explanations []string      `json:"explanations"`
-		Synonym      []string      `json:"synonym"`
-		Antonym      []string      `json:"antonym"`
-		WqxExample   [][]string    `json:"wqx_example"`
-		Entry        string        `json:"entry"`
-		Type         string        `json:"type"`
-		Related      []interface{} `json:"related"`
-		Source       string        `json:"source"`
-	} `json:"dictionary"`
+			EnUs string `json_test:"en-us"`
+			En   string `json_test:"en"`
+		} `json_test:"prons"`
+		Explanations []string      `json_test:"explanations"`
+		Synonym      []string      `json_test:"synonym"`
+		Antonym      []string      `json_test:"antonym"`
+		WqxExample   [][]string    `json_test:"wqx_example"`
+		Entry        string        `json_test:"entry"`
+		Type         string        `json_test:"type"`
+		Related      []interface{} `json_test:"related"`
+		Source       string        `json_test:"source"`
+	} `json_test:"dictionary"`
 }
 
 func query(word string) {
@@ -67,8 +67,8 @@ func query(word string) {
 	req.Header.Set("sec-ch-ua-mobile", "?0")
 	req.Header.Set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36")
 	req.Header.Set("app-name", "xy")
-	req.Header.Set("Content-Type", "application/json;charset=UTF-8")
-	req.Header.Set("Accept", "application/json, text/plain, */*")
+	req.Header.Set("Content-Type", "application/json_test;charset=UTF-8")
+	req.Header.Set("Accept", "application/json_test, text/plain, */*")
 	req.Header.Set("device-id", "")
 	req.Header.Set("os-type", "web")
 	req.Header.Set("X-Authorization", "token:qgemv4jr1y38jyq6vhvi")

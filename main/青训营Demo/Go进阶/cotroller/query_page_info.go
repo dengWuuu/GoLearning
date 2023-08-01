@@ -7,9 +7,9 @@ import (
 )
 
 type PageData struct {
-	Code int64       `json:"code"`
-	Msg  string      `json:"msg"`
-	Data interface{} `json:"data"`
+	Code int64       `json_test:"code"`
+	Msg  string      `json_test:"msg"`
+	Data interface{} `json_test:"data"`
 }
 
 func QueryPageInfo(topicIdStr string) *PageData {

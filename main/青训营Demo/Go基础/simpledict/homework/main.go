@@ -14,184 +14,184 @@ import (
 type DictResponse struct {
 	TransResult struct {
 		Data []struct {
-			Dst        string          `json:"dst"`
-			PrefixWrap int             `json:"prefixWrap"`
-			Result     [][]interface{} `json:"result"`
-			Src        string          `json:"src"`
-		} `json:"data"`
-		From     string `json:"from"`
-		Status   int    `json:"status"`
-		To       string `json:"to"`
-		Type     int    `json:"type"`
+			Dst        string          `json_test:"dst"`
+			PrefixWrap int             `json_test:"prefixWrap"`
+			Result     [][]interface{} `json_test:"result"`
+			Src        string          `json_test:"src"`
+		} `json_test:"data"`
+		From     string `json_test:"from"`
+		Status   int    `json_test:"status"`
+		To       string `json_test:"to"`
+		Type     int    `json_test:"type"`
 		Phonetic []struct {
-			SrcStr string `json:"src_str"`
-			TrgStr string `json:"trg_str"`
-		} `json:"phonetic"`
-	} `json:"trans_result"`
+			SrcStr string `json_test:"src_str"`
+			TrgStr string `json_test:"trg_str"`
+		} `json_test:"phonetic"`
+	} `json_test:"trans_result"`
 	DictResult struct {
 		Edict struct {
 			Item []struct {
 				TrGroup []struct {
-					Tr          []string `json:"tr"`
-					Example     []string `json:"example"`
-					SimilarWord []string `json:"similar_word"`
-				} `json:"tr_group"`
-				Pos string `json:"pos"`
-			} `json:"item"`
-			Word string `json:"word"`
-		} `json:"edict"`
+					Tr          []string `json_test:"tr"`
+					Example     []string `json_test:"example"`
+					SimilarWord []string `json_test:"similar_word"`
+				} `json_test:"tr_group"`
+				Pos string `json_test:"pos"`
+			} `json_test:"item"`
+			Word string `json_test:"word"`
+		} `json_test:"edict"`
 		Collins struct {
 			Entry []struct {
-				EntryID string `json:"entry_id"`
-				Type    string `json:"type"`
+				EntryID string `json_test:"entry_id"`
+				Type    string `json_test:"type"`
 				Value   []struct {
 					MeanType []struct {
-						InfoType string `json:"info_type"`
-						InfoID   string `json:"info_id"`
+						InfoType string `json_test:"info_type"`
+						InfoID   string `json_test:"info_id"`
 						Example  []struct {
-							ExampleID string `json:"example_id"`
-							TtsSize   string `json:"tts_size"`
-							Tran      string `json:"tran"`
-							Ex        string `json:"ex"`
-							TtsMp3    string `json:"tts_mp3"`
-						} `json:"example,omitempty"`
+							ExampleID string `json_test:"example_id"`
+							TtsSize   string `json_test:"tts_size"`
+							Tran      string `json_test:"tran"`
+							Ex        string `json_test:"ex"`
+							TtsMp3    string `json_test:"tts_mp3"`
+						} `json_test:"example,omitempty"`
 						Posc []struct {
-							Tran    string `json:"tran"`
-							PoscID  string `json:"posc_id"`
+							Tran    string `json_test:"tran"`
+							PoscID  string `json_test:"posc_id"`
 							Example []struct {
-								ExampleID string `json:"example_id"`
-								Tran      string `json:"tran"`
-								Ex        string `json:"ex"`
-								TtsMp3    string `json:"tts_mp3"`
-							} `json:"example"`
-							Def string `json:"def"`
-						} `json:"posc,omitempty"`
-					} `json:"mean_type"`
+								ExampleID string `json_test:"example_id"`
+								Tran      string `json_test:"tran"`
+								Ex        string `json_test:"ex"`
+								TtsMp3    string `json_test:"tts_mp3"`
+							} `json_test:"example"`
+							Def string `json_test:"def"`
+						} `json_test:"posc,omitempty"`
+					} `json_test:"mean_type"`
 					Gramarinfo []struct {
-						Tran  string `json:"tran"`
-						Type  string `json:"type"`
-						Label string `json:"label"`
-					} `json:"gramarinfo"`
-					Tran   string `json:"tran"`
-					Def    string `json:"def"`
-					MeanID string `json:"mean_id"`
+						Tran  string `json_test:"tran"`
+						Type  string `json_test:"type"`
+						Label string `json_test:"label"`
+					} `json_test:"gramarinfo"`
+					Tran   string `json_test:"tran"`
+					Def    string `json_test:"def"`
+					MeanID string `json_test:"mean_id"`
 					Posp   []struct {
-						Label string `json:"label"`
-					} `json:"posp"`
-				} `json:"value"`
-			} `json:"entry"`
-			WordName      string `json:"word_name"`
-			Frequence     string `json:"frequence"`
-			WordEmphasize string `json:"word_emphasize"`
-			WordID        string `json:"word_id"`
-		} `json:"collins"`
-		From        string `json:"from"`
+						Label string `json_test:"label"`
+					} `json_test:"posp"`
+				} `json_test:"value"`
+			} `json_test:"entry"`
+			WordName      string `json_test:"word_name"`
+			Frequence     string `json_test:"frequence"`
+			WordEmphasize string `json_test:"word_emphasize"`
+			WordID        string `json_test:"word_id"`
+		} `json_test:"collins"`
+		From        string `json_test:"from"`
 		SimpleMeans struct {
-			WordName  string   `json:"word_name"`
-			From      string   `json:"from"`
-			WordMeans []string `json:"word_means"`
+			WordName  string   `json_test:"word_name"`
+			From      string   `json_test:"from"`
+			WordMeans []string `json_test:"word_means"`
 			Exchange  struct {
-				WordPl []string `json:"word_pl"`
-			} `json:"exchange"`
+				WordPl []string `json_test:"word_pl"`
+			} `json_test:"exchange"`
 			Tags struct {
-				Core  []string `json:"core"`
-				Other []string `json:"other"`
-			} `json:"tags"`
+				Core  []string `json_test:"core"`
+				Other []string `json_test:"other"`
+			} `json_test:"tags"`
 			Symbols []struct {
-				PhEn  string `json:"ph_en"`
-				PhAm  string `json:"ph_am"`
+				PhEn  string `json_test:"ph_en"`
+				PhAm  string `json_test:"ph_am"`
 				Parts []struct {
-					Part  string   `json:"part"`
-					Means []string `json:"means"`
-				} `json:"parts"`
-				PhOther string `json:"ph_other"`
-			} `json:"symbols"`
-		} `json:"simple_means"`
-		Lang   string `json:"lang"`
+					Part  string   `json_test:"part"`
+					Means []string `json_test:"means"`
+				} `json_test:"parts"`
+				PhOther string `json_test:"ph_other"`
+			} `json_test:"symbols"`
+		} `json_test:"simple_means"`
+		Lang   string `json_test:"lang"`
 		Oxford struct {
 			Entry []struct {
-				Tag  string `json:"tag"`
-				Name string `json:"name"`
+				Tag  string `json_test:"tag"`
+				Name string `json_test:"name"`
 				Data []struct {
-					Tag  string `json:"tag"`
+					Tag  string `json_test:"tag"`
 					Data []struct {
-						Tag  string `json:"tag"`
+						Tag  string `json_test:"tag"`
 						Data []struct {
-							Tag  string `json:"tag"`
+							Tag  string `json_test:"tag"`
 							Data []struct {
-								Tag  string `json:"tag"`
+								Tag  string `json_test:"tag"`
 								Data []struct {
-									Tag    string `json:"tag"`
-									EnText string `json:"enText,omitempty"`
-									ChText string `json:"chText,omitempty"`
-									G      string `json:"g,omitempty"`
+									Tag    string `json_test:"tag"`
+									EnText string `json_test:"enText,omitempty"`
+									ChText string `json_test:"chText,omitempty"`
+									G      string `json_test:"g,omitempty"`
 									Data   []struct {
-										Text      string `json:"text"`
-										HoverText string `json:"hoverText"`
-									} `json:"data,omitempty"`
-								} `json:"data"`
-							} `json:"data"`
-						} `json:"data,omitempty"`
-						P     string `json:"p,omitempty"`
-						PText string `json:"p_text,omitempty"`
-						N     string `json:"n,omitempty"`
-						Xt    string `json:"xt,omitempty"`
-					} `json:"data"`
-				} `json:"data"`
-			} `json:"entry"`
+										Text      string `json_test:"text"`
+										HoverText string `json_test:"hoverText"`
+									} `json_test:"data,omitempty"`
+								} `json_test:"data"`
+							} `json_test:"data"`
+						} `json_test:"data,omitempty"`
+						P     string `json_test:"p,omitempty"`
+						PText string `json_test:"p_text,omitempty"`
+						N     string `json_test:"n,omitempty"`
+						Xt    string `json_test:"xt,omitempty"`
+					} `json_test:"data"`
+				} `json_test:"data"`
+			} `json_test:"entry"`
 			Unbox []struct {
-				Tag  string `json:"tag"`
-				Type string `json:"type"`
-				Name string `json:"name"`
+				Tag  string `json_test:"tag"`
+				Type string `json_test:"type"`
+				Name string `json_test:"name"`
 				Data []struct {
-					Tag     string `json:"tag"`
-					Text    string `json:"text,omitempty"`
-					Words   string `json:"words,omitempty"`
-					Outdent string `json:"outdent,omitempty"`
+					Tag     string `json_test:"tag"`
+					Text    string `json_test:"text,omitempty"`
+					Words   string `json_test:"words,omitempty"`
+					Outdent string `json_test:"outdent,omitempty"`
 					Data    []struct {
-						Tag    string `json:"tag"`
-						EnText string `json:"enText"`
-						ChText string `json:"chText"`
-					} `json:"data,omitempty"`
-				} `json:"data"`
-			} `json:"unbox"`
-		} `json:"oxford"`
+						Tag    string `json_test:"tag"`
+						EnText string `json_test:"enText"`
+						ChText string `json_test:"chText"`
+					} `json_test:"data,omitempty"`
+				} `json_test:"data"`
+			} `json_test:"unbox"`
+		} `json_test:"oxford"`
 		BaiduPhrase []struct {
-			Tit   []string `json:"tit"`
-			Trans []string `json:"trans"`
-		} `json:"baidu_phrase"`
+			Tit   []string `json_test:"tit"`
+			Trans []string `json_test:"trans"`
+		} `json_test:"baidu_phrase"`
 		QueryExplainVideo struct {
-			ID           int    `json:"id"`
-			UserID       string `json:"user_id"`
-			UserName     string `json:"user_name"`
-			UserPic      string `json:"user_pic"`
-			Query        string `json:"query"`
-			Direction    string `json:"direction"`
-			Type         string `json:"type"`
-			Tag          string `json:"tag"`
-			Detail       string `json:"detail"`
-			Status       string `json:"status"`
-			SearchType   string `json:"search_type"`
-			FeedURL      string `json:"feed_url"`
-			Likes        string `json:"likes"`
-			Plays        string `json:"plays"`
-			CreatedAt    string `json:"created_at"`
-			UpdatedAt    string `json:"updated_at"`
-			DuplicateID  string `json:"duplicate_id"`
-			RejectReason string `json:"reject_reason"`
-			CoverURL     string `json:"coverUrl"`
-			VideoURL     string `json:"videoUrl"`
-			ThumbURL     string `json:"thumbUrl"`
-			VideoTime    string `json:"videoTime"`
-			VideoType    string `json:"videoType"`
-		} `json:"queryExplainVideo"`
-	} `json:"dict_result"`
+			ID           int    `json_test:"id"`
+			UserID       string `json_test:"user_id"`
+			UserName     string `json_test:"user_name"`
+			UserPic      string `json_test:"user_pic"`
+			Query        string `json_test:"query"`
+			Direction    string `json_test:"direction"`
+			Type         string `json_test:"type"`
+			Tag          string `json_test:"tag"`
+			Detail       string `json_test:"detail"`
+			Status       string `json_test:"status"`
+			SearchType   string `json_test:"search_type"`
+			FeedURL      string `json_test:"feed_url"`
+			Likes        string `json_test:"likes"`
+			Plays        string `json_test:"plays"`
+			CreatedAt    string `json_test:"created_at"`
+			UpdatedAt    string `json_test:"updated_at"`
+			DuplicateID  string `json_test:"duplicate_id"`
+			RejectReason string `json_test:"reject_reason"`
+			CoverURL     string `json_test:"coverUrl"`
+			VideoURL     string `json_test:"videoUrl"`
+			ThumbURL     string `json_test:"thumbUrl"`
+			VideoTime    string `json_test:"videoTime"`
+			VideoType    string `json_test:"videoType"`
+		} `json_test:"queryExplainVideo"`
+	} `json_test:"dict_result"`
 	LijuResult struct {
-		Double string   `json:"double"`
-		Tag    []string `json:"tag"`
-		Single string   `json:"single"`
-	} `json:"liju_result"`
-	Logid int `json:"logid"`
+		Double string   `json_test:"double"`
+		Tag    []string `json_test:"tag"`
+		Single string   `json_test:"single"`
+	} `json_test:"liju_result"`
+	Logid int `json_test:"logid"`
 }
 
 func query(word string) {
